@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif; */
+:root {
+  --orangeColor: hsl(31, 77%, 52%);
+  --darkCyanColor: hsl(184, 100%, 22%);
+  --darkerCyanColor: hsl(179, 100%, 13%);
+  --whiteColor: hsla(0, 0%, 100%, 0.75);
+  --lightGrayColor: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  padding-top: 5.9rem;
+  background-color: var(--lightGrayColor);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.cards__cars {
+  display: grid;
+}
+
+.card {
+  width: 22rem;
+  padding: 3.5rem 3.1rem 3rem 3.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.15rem;
+}
+
+.sedans {
+  background-color: var(--orangeColor);
+  border-radius: 7px 7px 0 0;
+}
+
+.suvs {
+  background-color: var(--darkCyanColor);
+}
+
+.luxury {
+  background-color: var(--darkerCyanColor);
+  border-radius: 0 0 7px 7px;
+}
+
+.card img {
+  width: 4.26rem;
+}
+
+.secondary__heading {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.62rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  color: var(--lightGrayColor);
+  cursor: default;
+}
+
+.card__info {
+  line-height: 1.72;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  color: var(--whiteColor);
+  margin-top: -3px;
+  cursor: default;
+}
+
+.more {
+  align-self: flex-start;
+  background-color: var(--lightGrayColor);
+  padding: 0.85rem 2.1rem;
+  margin-top: -2px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid var(--lightGrayColor);
+  transition: all 0.2s ease-in-out;
+}
+
+.sedans .more {
+  color: var(--orangeColor);
+}
+
+.suvs .more {
+  color: var(--darkCyanColor);
+}
+
+.luxury .more {
+  color: var(--darkCyanColor);
+}
+
+.card .more:hover {
+  color: var(--lightGrayColor);
+  background-color: transparent;
+}
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 1024px) {
+  body {
+    padding-top: 3.9rem;
+    justify-content: center;
+  }
+  .cards__cars {
+    margin-top: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .secondary__heading {
+    margin-top: -20px;
+  }
+
+  .card {
+    width: 20.5rem;
+    padding: 2.8rem 3.15rem 3rem 3.2rem;
+    gap: 2rem;
+  }
+
+  .card img {
+    width: 4.4rem;
+    margin-bottom: 1.7rem;
+  }
+
+  .sedans {
+    background-color: var(--orangeColor);
+    border-radius: 7px 0 0 7px;
+  }
+
+  .luxury {
+    background-color: var(--darkerCyanColor);
+    border-radius: 0 7px 7px 0;
+  }
+  .card__info {
+    line-height: 1.8;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: var(--whiteColor);
+    margin-top: -3px;
+  }
+
+  .more {
+    margin-top: 3.6rem;
+    padding: 0.95rem 2.1rem;
+  }
+}
