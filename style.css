@@ -97,7 +97,7 @@ body {
 }
 
 .luxury .more {
-  color: var(--darkCyanColor);
+  color: var(--darkerCyanColor);
 }
 
 .card .more:hover {
